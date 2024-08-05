@@ -1,0 +1,245 @@
+.warp {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.advise_container {
+    height: auto;
+    padding: 20px;
+    margin-left: 270px;
+    margin-top: 60px;
+}
+
+.advise_title {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 20px;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.text_box {
+    width: 95%;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/*검색창*/
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.search-container input[type="text"] {
+    padding: 3px;
+    font-size: 13px;
+    border: 1px solid #ddd ;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-container button img {
+    width: 16px;
+    height: 16px;
+}
+
+.search-container button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*테이블*/
+
+.table-wrapper {
+    margin-top: 20px;
+    width: 95%;
+    max-height: 700px;
+    /* 높이 제한 설정 */
+    overflow-y: auto;
+    /* 세로 스크롤만 허용 */
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.f1-table {
+    font-size: 15px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    text-align: center;
+
+}
+
+.f2-table {
+    font-size: 15px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    text-align: center;
+
+}
+
+
+h2 {
+    font-size: 22px;
+    float: left;
+    margin-top: 20px;
+}
+
+.f1-table td,
+.f1-table th {
+    text-align: center;
+    padding: 15px;
+}
+
+.f2-table td,
+.f2-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.see,
+.out {
+    margin: 5px 5px;
+    padding: 3px;
+}
+
+.out:hover {
+    background-color: rgb(232, 54, 54);
+    color: white;
+}
+
+.f1-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 13px;
+
+}
+
+.f1-table thead th {
+    color: #ffffff;
+    /*    background: #4FC3A1;*/
+    background: #5272FF;
+}
+
+
+.f1-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+.f2-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 13px;
+
+}
+
+.f2-table thead th {
+    color: #ffffff;
+    /*    background: #4FC3A1;*/
+    background: #5272FF;
+}
+
+
+.f2-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/*회사 추가*/
+#table {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+table {
+    background: white;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.5);
+}
+
+thead tr {
+    height: 45px;
+}
+
+.title-td {
+    position: relative;
+}
+
+.title-td span {
+    position: relative;
+    top: 6px;
+}
+
+.page_1 input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ddd ;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4) ;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4);
+    border: none;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.red,
+.remove {
+    background: #e74c3c;
+}
+
+.green {
+    background: #2ecc71;
+}
+
+tr>td {
+    position: relative;
+}
+
+.static {
+    position: static !important;
+}
+
+.remove {
+    margin-top: 15px;
+}
+
+
+.xi-close {
+  font-weight: bold;
+}

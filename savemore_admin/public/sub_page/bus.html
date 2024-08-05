@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Bus</title>
+
+      <!--아이콘-->
+      <link rel="icon" type="image/png" href="../img/admin.png">
+    
+      <!--글씨체-->
+      <link rel="stylesheet" as="style" crossorigin
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+      <!--style-->
+      <link rel="stylesheet" href="../css/main.css">
+      <link rel="stylesheet" href="../css/bus.css">
+  
+</head>
+
+<body>
+  <!-- main wrapper -->
+  <div class="dashboard-main-wrapper">
+    <!-- navbar -->
+    <div class="dashboard-header">
+        <nav class="navtop">
+            <a class="nav-logo" href="../index.html">Save More</a>
+            <div class="navbar-collapse " id="navContent">
+                <ul class="navbar-right-top">
+                    <li class="nav-item1">
+                        <a class="nav-icons1" id="navbartext1">관리지용</a>
+                    </li>
+                    <li class="nav-item2">
+                        <a class="nav-icons2" id="navbartext2">Admin0</a>
+                    </li>
+                        <button class="nav-icons3" id="logouttop">Logout</button>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end navbar -->
+    <div>
+      <ul class="rightmenu">
+        <li class="menu"><a class="first" href="#">MENU</a></li>
+        <li class="menu"><a href="./member.html">회원정보</a></li>
+        <li class="menu"><a href="./community.html">커뮤니티</a></li>
+        <li class="menu"><a href="./advertisement.html">광고</a></li>
+        <li class="menu"><a href="./bus.html">버스시간표</a></li>
+      </ul>
+  </div>
+
+  <div class="title_container">
+    <div class="member_title">
+      <p class="title">버스 시간표 관리</p>
+    </div>
+  </div>
+  <div class="warp">
+  <div class="page_1">
+  <div class="page_container">
+    <div class="page_0">
+      <table>
+            <div class="table-wrapper">
+              <table class="gu-table">
+                <div><h2>자치구 선택</h2></div>
+                  <thead>
+                  <tr>
+                      <th class="">No.</th>
+                      <th class="">자치구</th>
+                  </tr>
+                  </thead>
+                <tbody>
+                  <tr data-district="강남구">
+                    <td>1</td>
+                    <td class="cleck" onclick="Click(this.innerText)">강남구</td>
+                  </tr>
+                  <tr data-district="강북구">
+                    <td>2</td>
+                    <td class="cleck" onclick="Click(this.innerText)">강북구</td>
+                  </tr>
+                  <tr data-district="강서구">
+                    <td>3</td>
+                    <td class="cleck" onclick="Click(this.innerText)">강서구</td>
+                  </tr>
+                  <tr data-district="관악구">
+                    <td>4</td>
+                    <td class="cleck" onclick="Click(this.innerText)">관악구</td>
+                  </tr>
+                  <tr data-district="광진구">
+                    <td>5</td>
+                    <td class="cleck" onclick="Click(this.innerText)">광진구</td>
+                  </tr>
+                  <tr data-district="금천구">
+                    <td>6</td>
+                    <td class="cleck" onclick="Click(this.innerText)">금천구</td>
+                  </tr>
+                  <tr data-district="노원구">
+                    <td>7</td>
+                    <td class="cleck" onclick="Click(this.innerText)">노원구</td>
+                  </tr>
+                  <tr data-district="도봉구">
+                    <td>8</td>
+                    <td class="cleck" onclick="Click(this.innerText)">도봉구</td>
+                  </tr>
+                  <tr data-district="동대문구">
+                    <td>9</td>
+                    <td class="cleck" onclick="Click(this.innerText)">동대문구</td>
+                  </tr>
+                  <tr data-district="동작구">
+                    <td>10</td>
+                    <td class="cleck" onclick="Click(this.innerText)">동작구</td>
+                  </tr>
+                  <tr data-district="서대문구">
+                    <td>11</td>
+                    <td class="cleck" onclick="Click(this.innerText)">서대문구</td>
+                  </tr>
+                  <tr data-district="서초구">
+                    <td>12</td>
+                    <td class="cleck" onclick="Click(this.innerText)">서초구</td>
+                  </tr>
+                  <tr data-district="성동구">
+                    <td>13</td>
+                    <td class="cleck" onclick="Click(this.innerText)">성동구</td>
+                  </tr>
+                  <tr data-district="성북구">
+                    <td>14</td>
+                    <td class="cleck" onclick="Click(this.innerText)">성북구</td>
+                  </tr>
+                  <tr data-district="영등포구">
+                    <td>15</td>
+                    <td class="cleck" onclick="Click(this.innerText)">영등포구</td>
+                  </tr>
+                  <tr data-district="은평구">
+                    <td>16</td>
+                    <td class="cleck" onclick="Click(this.innerText)">은평구</td>
+                  </tr>
+                  <tr data-district="중랑구">
+                    <td>17</td>
+                    <td class="cleck" onclick="Click(this.innerText)">중랑구</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      </table>
+    </div>
+    <div class="page_2">
+      <div class="member_container">
+        <div class="member_title">
+              <div class="table-wrapper">
+                <table class="fl-table">
+                  <div><h2>배차</h2></div>
+                    <thead>
+                    <tr>
+                      <th class="">No.</th>
+                      <th class="">정류장</th>
+                      <th class="">회차1</th>
+                      <th class="">회차2</th>
+                      <th class="">회차3</th>
+                      <th class="">회차4</th>
+                      <th class="">회차5</th>
+                      <th class="">회차6</th>
+                      <th class="">회차7</th>
+                      <th class="">회차8</th>
+                      <th class="">회차9</th>
+                    </tr>
+                    </thead>
+                    <tbody id="bus_data">
+                      <!-- 데이터 추가 -->
+                    </tbody>
+                </table>
+              </div>
+              <div id="culture-list"></div>
+              <div id="number-list">
+                <div class="number-lists">
+                    <div onclick="page_minus()" class="move" id="back">&lt;</div>
+                    <div class="number-list" id="page-numbers">
+                        <div onclick="paging(this.innerText,bigPage)">1</div>
+                        <div onclick="paging(this.innerText,bigPage)">2</div>
+                        <div onclick="paging(this.innerText,bigPage)">3</div>
+                        <div onclick="paging(this.innerText,bigPage)">4</div>
+                        <div onclick="paging(this.innerText,bigPage)">5</div>
+                    </div>
+                    <div onclick="page_plus()" class="move" id="front">&gt;</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script>
+  let currentPage = 1;
+  let totalPages = 0;
+  let busData = [];
+  let uniqueBusNumbers = [];
+
+  function Click(region){
+    fetch(`/bus/${region}`)
+    .then(response => {
+      console.log('데이터를 받아옴.');
+      console.log(response);
+      return response.json();
+      })
+    .then(data => {
+      console.log(data);
+      busData = Array.isArray(data) ? data : [];
+      uniqueBusNumbers = [...new Set(busData.map(bus => bus.bus_num))];
+      totalPages = uniqueBusNumbers.length;
+      currentPage = 1; // 첫 페이지로 초기화
+      displayBusData();
+      displayPageNumbers();
+    });
+  }
+      function displayBusData() {
+        const tbody = document.getElementById('bus_data');
+        tbody.innerHTML='';
+
+        if (busData.length > 0 && currentPage <= totalPages){
+          const currentBusNum = uniqueBusNumbers[currentPage -1];
+          const filteredData = busData.filter(bus => bus.bus_num === currentBusNum);
+          filteredData.forEach(bus => {
+            const row = document.createElement('tr')
+            row.innerHTML = `
+              <td>${bus.bus_num}</td>
+              <td style="width: 200px">${bus.station}</td>
+              <td>${bus.time1 || ''}</td>
+              <td>${bus.time2 || ''}</td>
+              <td>${bus.time3 || ''}</td>
+              <td>${bus.time4 || ''}</td>
+              <td>${bus.time5 || ''}</td>
+              <td>${bus.time6 || ''}</td>
+              <td>${bus.time7 || ''}</td>
+              <td>${bus.time8 || ''}</td>
+              <td>${bus.time9 || ''}</td>
+          `;
+          tbody.appendChild(row);
+          });
+        }
+      }
+
+      function displayPageNumbers() {
+        const pageNumbers = document.getElementById('page-numbers')
+        pageNumbers.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++){
+          const pageNumber = document.createElement('div');
+          pageNumber.innerText = i;
+          pageNumber.onclick = () => goToPage(i);
+          pageNumbers.appendChild(pageNumber);
+        }
+      }
+
+      function goToPage(pageNumber) {
+            if (pageNumber >= 1 && pageNumber <= totalPages) {
+                currentPage = pageNumber;
+                displayBusData();
+            }
+        }
+
+        function page_minus() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayBusData();
+            }
+        }
+
+        function page_plus() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayBusData();
+            }
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const region = '강남구';
+          Click(region);
+        });
+
+        document.getElementById('logouttop').addEventListener('click', function() {
+    fetch('/login/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = './login.html';
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  })
+</script>
+</html>

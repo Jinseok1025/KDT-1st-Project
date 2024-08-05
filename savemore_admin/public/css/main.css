@@ -1,0 +1,142 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체 상단바 스타일 */
+.navtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid gray;
+  box-shadow: 1px 1px gray;
+  height: 40px;
+  width: 98%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+/* 로고 */
+.nav-logo {
+  font-size: 30px;
+  color: #5272FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-item2 {
+  border-left: 1px solid gray; 
+  border-right: 1px solid gray; 
+  padding-left: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+/* 네비게이션 아이템 */
+.navbar-right-top {
+  display: flex;
+  align-items: center;
+}
+
+/* 각 네비게이션 아이템 */
+.nav-item1, .nav-item2, #logouttop {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+/* 네비게이션 링크 */
+.nav-icons1, .nav-icons2, .nav-icons3 {
+  color: black;
+  font-size: 16px;
+}
+
+#logouttop {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#logouttop:hover {
+  background-color: red;
+  color: white;
+}
+
+body {
+  font-family: 'pretendard';
+  font-size: 16px;
+  /* height: 100%; */
+}
+
+.menu {
+  list-style: none;
+}
+
+.rightmenu {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+  width: 250px;
+  background: #333;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+}
+
+.menu {
+  height: 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.menu a {
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  color: #c9c9c9;
+  font-weight: bold;
+}
+.menu:first-of-type{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.first {
+  border-bottom: 1px solid white; 
+}
+
+.menu a:hover {
+  background: #535353;
+  color: #fff;
+}
+
+.menu a.first {
+  background: #333;
+  color: #fff;
+}
+
+.page_1 {
+  height: auto;
+  padding: 20px;
+  margin-left: 270px;
+}
+
+/* .menu:focus,
+.menu.active {
+    background-color: #bebec7;
+    color: white;
+    border-radius: 2px;
+}
+
+.menu:focus,
+.menu:hover {
+    background-color: #e2e2eb;
+    color: #3d405c;
+    border-radius: 2px;
+} */

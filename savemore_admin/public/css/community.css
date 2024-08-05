@@ -1,0 +1,183 @@
+#communityList {
+    font-size: 15px;
+        font-weight: normal;
+        background-color: white;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+}
+
+.warp {
+    height: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 5%;
+}
+.member_container {
+    height: auto;
+    padding: 20px;
+    margin-left: 270px;
+    margin-top: 60px;
+
+    }
+
+    .member_title {
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 20px;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+    .page_1{
+        margin-top: 20px;
+        width: 35%;
+        float: left;
+        box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-bottom: 80px;
+    }
+    
+    .page_2{
+        margin-left: 30px;
+        margin-top: 25px;
+        width: 30%;
+        float: left;
+        box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 80px;
+    }
+    
+
+    .page_1 h2{
+        float: left;
+        width: 30%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .page_2 h2{
+        float: left;
+        width: 30%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .text_box {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+
+    /*검색창*/
+
+    .search-container {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        float: right;
+    }
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        font-size: 13px;
+        border: 1px solid #675e5e;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+
+    .search-container button {
+        padding: 3px;
+        border: 1px solid #ccc;
+        border-left: none;
+        background-color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        margin-left: -3.5px;
+    }
+
+    .search-container button img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .search-container button:hover {
+        background-color: #f0f0f0;
+    }
+
+    /*테이블*/
+    .list-wrapper {
+        max-height: 500px; /* 높이 제한 설정 */
+        overflow-y: auto;  /* 세로 스크롤만 허용 */
+        clear: both;
+        box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    
+    .fl-list {
+        font-size: 15px;
+        font-weight: normal;
+        background-color: white;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .fl-list li {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        background: #fff;
+        border-bottom: 1px solid #f8f8f8;
+    }
+    .fl-list li:nth-of-type(odd) {
+        background: #858585;
+        }
+    
+    .fl-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .fl-list li span {
+        flex: 1;
+        white-space: nowrap;
+    }
+
+    .fl-list li div {
+        flex: 1;
+        white-space: nowrap;
+    }
+    
+    .del {
+        margin: 5px 10px;
+        padding: 2px;
+        font-size: 10px;
+    }
+    
+    .hover:hover {
+        background-color: rgb(232, 54, 54);
+        color: white;
+    }
+    
+    .fl-list li:nth-child(even) {
+        background: #F8F8F8;
+    }
+    
+    .fl-list li:nth-child(odd) {
+        background: white;
+    }
+    
+    .list-head li {
+        background: #5272FF;
+        color: #ffffff;
+    }

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveMore</title>
+
+    <!--글씨체-->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!--style-->
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+
+    <!-- script libraries -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../css/jquery.fullPage.css"></script>
+    <script src="../css/slick.css"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="./google-apps-script.js"></script>
+    
+    
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+        #wrapper {
+            background-color: #A3DEF2;
+        }
+        body {
+            min-width: 375px;
+            background-color: #A3DEF2;
+        }
+        #fullpage {
+            /* background-color: yellow; */
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 100px;
+            height: 800px;
+        }
+
+        .container_log {
+            width: 60%;
+            max-width: 600px;
+            background-color: #A3DEF2;
+            padding: 10px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+            /* border-radius: 10px; */
+            margin: 70px auto;
+            height: auto;
+        }
+
+        .logo img {
+            max-width: 400px;
+            display: block;
+            width: 60%;
+            height: auto;
+            margin: 40px auto;
+            cursor: pointer;
+        }
+
+        .container_log form{
+            padding-top: 20px;
+            height: 300px;
+            /* background-color: aqua; */
+        }
+        .container_log .userid, .userpw {
+            margin-bottom: 25px;
+        }
+        
+
+        .container_log input {
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 15px 10px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            border: 2px solid #ccc;
+            outline: none;
+        }
+
+        .container_log .log_btn {
+            background-color: #5271FF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 80%;
+            box-sizing: border-box;
+            padding: 15px 15px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .container_log .log_btn:hover {
+            background-color: #ffffff ; /* 버튼 호버 효과 */
+            color:#5271FF;
+            font-weight: 800;
+        }
+
+        .signup-link {
+            font-size: 1em;
+            margin-top: 20px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .signup-link a {
+            color: #001fa8;
+        }
+        .signup-link a:hover {
+            color: #5271FF;
+        }
+        .signup-link div{
+            margin-left: 10px;
+            float: left;
+        }
+
+
+
+
+        @media screen and (max-width:600px) {
+
+            #fullpage{
+                height: 600px;
+            }
+            
+            .container_log {
+                width : 90%;
+                margin: 40px auto;
+                height: auto;
+            }
+            .container_log form{
+                padding-top: 5px;
+                height: 230px;
+                /* background-color: aqua; */
+            }
+            .container_log .userid, .userpw {
+                margin-bottom: 15px;
+            }
+            input {
+            border-radius: 5px;
+            height: 35px;
+            }
+
+            .container_log .log_btn {
+                padding: 10px 15px;
+
+            }
+            /* footer{
+                    display: none;
+            } */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+
+        <!--fullpage-->  
+        <div id="fullpage">
+            <!--section1-->
+                <div class="container_log">
+                    <div class="logo">
+                        <img src="../../img/logo1.png" alt="Save More 로고">
+                    </div>
+                    <form id="loginForm" action="/login" method="post">
+                        <div class="userid">
+                            <input type="text" id="userid" name="userid" placeholder="아이디" required>
+                        </div>
+                        <div class="userpw">
+                            <input type="password" id="password" name="password" placeholder="비밀번호" required>
+                        </div>
+                        <!--onclick="window.location.href='#'-->
+                        <button  type="submit" class="log_btn" >로그인</button>
+                </form>
+                </div>
+        </div>
+    
+        <!-- <footer>
+        <div>
+            ⓒ COPYLIGHT 2024 BY MONEY FORCE GROP
+        </div>
+        </footer> -->
+
+</div> 
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = {
+        userid: document.getElementById('userid').value,
+        password: document.getElementById('password').value
+    };
+
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = '../../index.html'; // 로그인 성공 시 리디렉션
+        } else {
+            alert(data.message); // 에러 메시지 표시
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+</html>

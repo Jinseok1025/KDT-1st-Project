@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Member</title>
+
+      <!--아이콘-->
+      <link rel="icon" type="image/png" href="../img/admin.png">
+    
+      <!--글씨체-->
+      <link rel="stylesheet" as="style" crossorigin
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+      <!--style-->
+      <link rel="stylesheet" href="../css/main.css">
+      <link rel="stylesheet" href="../css/member.css">
+  
+</head>
+<body>
+  <!-- main wrapper -->
+  <div class="dashboard-main-wrapper">
+    <!-- navbar -->
+    <div class="dashboard-header">
+        <nav class="navtop">
+            <a class="nav-logo" href="/index.html">Save More</a>
+            <div class="navbar-collapse " id="navContent">
+                <ul class="navbar-right-top">
+                    <li class="nav-item1">
+                        <a class="nav-icons1" id="navbartext1">관리지용</a>
+                    </li>
+                    <li class="nav-item2">
+                        <a class="nav-icons2" id="navbartext2">Admin0</a>
+                    </li>
+                        <button class="nav-icons3" id="logouttop">Logout</button>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <!-- end navbar -->
+    <div>
+      <ul class="rightmenu">
+        <li class="menu"><a class="first" href="#">MENU</a></li>
+        <li class="menu"><a href="./member.html">회원정보</a></li>
+        <li class="menu"><a href="./community.html">커뮤니티</a></li>
+        <li class="menu"><a href="./advertisement.html">광고</a></li>
+        <li class="menu"><a href="./bus.html">버스시간표</a></li>
+      </ul>
+  </div>
+
+  <div class="member_container">
+    <div class="member_title">
+      <p class="title">회원 리스트</p>
+    </div>
+  </div>
+  <div class="warp"> 
+  <div class="page_1">
+          <div class="table-wrapper">
+              <div><h2>회원정보 조회</h2></div>
+              <div class="search-container">
+                <input type="text" placeholder="아이디를 검색하세요." id="searchInput">
+                <button><img id="searchButton" src="../img/search.png" alt="Search"></button>
+            </div>
+            <table class="fl-table">
+                <thead>
+                <tr>
+                  <th class="">#</th>
+                  <th class="">아이디</th>
+                  <th class="">이름</th>
+                  <th class="">닉네임</th>
+                  <th class="">이메일</th>
+                  <th class="">생년월일</th>
+                  <th class="">성별</th>
+                  <th class="">핸드폰 번호</th>
+                  <th class="">소득분위</th>
+                  <th class="">가입일</th>
+                  <th class="">탈퇴</th>
+                </tr>
+                </thead>
+              <tbody id="userTableBody">
+                <tr>
+                  <td>1</td>
+                  <td>apple</td>
+                  <td>김사과</td>
+                  <td>test1</td>
+                  <td>apple@apple.com</td>
+                  <td>20240518</td>
+                  <td>여자</td>
+                  <td>01011111111</td>
+                  <td>5</td>
+                  <td>2024.05.10</td>
+                  <td class="small">
+                    <button class="out">회원탈퇴</button>
+                  </td>
+              </tr>
+            </tbody>
+    </table>
+    <div id="culture-list"></div>
+                    <div id="number-list">
+                        <div class="number-lists">
+                            <div onclick="page_minus()" class="move" id="back">&lt;</div>
+                            <div class="number-list" id="page-numbers">
+                                <div onclick="paging(this.innerText,bigPage)">1</div>
+                                <div onclick="paging(this.innerText,bigPage)">2</div>
+                                <div onclick="paging(this.innerText,bigPage)">3</div>
+                                <div onclick="paging(this.innerText,bigPage)">4</div>
+                                <div onclick="paging(this.innerText,bigPage)">5</div>
+                            </div>
+                            <div onclick="page_plus()" class="move" id="front">&gt;</div>
+                        </div>
+                    </div>  
+  </div>
+</div>
+</div>
+</body>
+<script>
+  let currentPage = 1;
+  let totalUsers = 0;
+  let totalPages = 0
+  let usersData = [];
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    if (searchButton && searchInput) {
+      searchButton.addEventListener('click', function() {
+        const searchQuery = searchInput.value.trim();
+        currentPage = 1;  // 검색완료 시 첫페이지로.
+        fetchUsers(searchQuery);
+      });
+    }
+
+    fetchUsers(); // 초기 페이지 로드 시 사용자 목록 가져오기
+
+    document.getElementById('logouttop').addEventListener('click', function() {
+        fetch('/login/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            window.location.href = './login.html';
+          } else {
+            alert(data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    });
+
+    function fetchUsers(query = '') {
+      let url = `/users?page=${currentPage}&limit=10`;
+      if (query) {
+        url += `&search=${query}`;
+      }
+
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Received data:', data); // 로그 추가
+          usersData = Array.isArray(data.users) ? data.users : [];
+          totalUsers = data.totalUsers;
+          totalPages = Math.ceil(totalUsers  / 10);
+          displayUsersData();
+          displayPageNumbers();
+        })
+        .catch(error => console.error('안불러옴 ㄷㄷ:', error));
+      }
+
+      function displayUsersData() {
+        const tbody = document.getElementById('userTableBody');
+        tbody.innerHTML = '';
+
+        if (usersData.length > 0) {
+          usersData.forEach((user, index) => {
+          const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${(currentPage - 1) * 10 + index + 1}</td>
+              <td>${user.userid}</td>
+              <td>${user.name}</td>
+              <td>${user.nickname}</td>
+              <td>${user.email}</td>
+              <td>${user.ssn1}</td>
+              <td>${user.gender}</td>
+              <td>${user.hp}</td>
+              <td>${user.income}</td>
+              <td>${new Date(user.createdAt).toLocaleDateString()}</td>
+              <td class="small">
+                <button class="out" onclick="deleteUser('${user._id}')">회원탈퇴</button>
+              </td>
+            `;
+            tbody.appendChild(row);
+          });
+        }
+      }
+
+      function displayPageNumbers() {
+      const pageNumbers = document.getElementById('page-numbers');
+      pageNumbers.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const pageNumber = document.createElement('div');
+        pageNumber.innerText = i;
+        pageNumber.onclick = () => goToPage(i);
+        pageNumber.classList.toggle('active', i === currentPage);
+        pageNumbers.appendChild(pageNumber);
+      }
+    }
+
+    function goToPage(pageNumber) {
+      if (pageNumber >= 1 && pageNumber <= totalPages) {
+        currentPage = pageNumber;
+        fetchUsers();
+      }
+    }
+
+    function page_minus() {
+      if (currentPage > 1) {
+        currentPage--;
+        fetchUsers();
+      }
+    }
+
+    function page_plus() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        fetchUsers();
+      }
+    }
+
+    function deleteUser(userId) {
+      if (confirm('정말로 이 사용자를 삭제하시겠습니까?')) {
+        fetch(`/users/${userId}`, {
+          method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.message) {
+            alert(data.message);
+            fetchUsers(); // 페이지 새로고침 없이 데이터 다시 불러오기
+          }
+        })
+        .catch(error => console.error('Error deleting user:', error));
+      }
+    }
+</script>
+</html>

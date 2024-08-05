@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Main</title>
+
+
+  <!--아이콘-->
+  <link rel="icon" type="image/png" href="./img/admin.png">
+
+  <!--글씨체-->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <!--style-->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+  <!-- main wrapper -->
+  <div class="dashboard-main-wrapper">
+    <!-- navbar -->
+    <div class="dashboard-header">
+      <nav class="navtop">
+        <a class="nav-logo" href="./index.html">Save More</a>
+        <div class="navbar-collapse " id="navContent">
+          <ul class="navbar-right-top">
+            <li class="nav-item1">
+              <a class="nav-icons1" id="navbartext1">관리지용</a>
+            </li>
+            <li class="nav-item2">
+              <a class="nav-icons2" id="navbartext2">Admin0</a>
+            </li>
+            <button class="nav-icons3" id="logouttop">Logout</button>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- end navbar -->
+  <div>
+    <ul class="rightmenu">
+      <li class="menu"><a class="first" href="#">MENU</a></li>
+      <li class="menu"><a href="./sub_page/member.html">회원정보</a></li>
+      <li class="menu"><a href="./sub_page/community.html">커뮤니티</a></li>
+      <li class="menu"><a href="./sub_page/advertisement.html">광고</a></li>
+      <li class="menu"><a href="./sub_page/bus.html">버스시간표</a></li>
+    </ul>
+  </div>
+
+  <div class="index_container">
+    <div class="indexx_title">
+      <p class="title">Overview</p>
+    </div>
+  </div>
+
+  <div class="page_1">
+    <div class="container">
+      <div class="item sidebar">
+        <div class="text">
+          <h2>최근 가입자 </h2>
+        </div>
+        <table class="member-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>닉네임</th>
+              <th>이름</th>
+              <th>소득분위</th>
+              <th>가입일</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody">
+            <tr>
+              <td>1</td>
+              <td>apple</td>
+              <td>이사라</td>
+              <td>3분위</td>
+              <td>2024.01.05</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="item content-1">
+        <div class="text">
+          <h2> 광고료 </h2>
+        </div>
+          <div class="center">
+            <div class="graph-wrapper">
+              <div class="graph__heading">
+                <span class="graph--title">
+                  <h1 class="text-lg">Weekly Report</h1>
+                  <h2 class="text-md">01. Feb - 07. Feb</h2>
+                </span>
+                <span class="graph--revenue">
+                  <p class="text-md">Revenue</p>
+                  <p class=text-lg>$3621.79</p>
+                </span>
+              </div>
+              <div class="graph__body">
+                <div class="graph--key">
+                  <span class="key-red"></span>
+                  <span>advertising fee</span>
+                  <span class="key-blue"></span>
+                  <span>number</span>
+                </div>
+                <figure class="graph--data">
+                  <svg viewBox="0 0 700 110">
+                    <line class="x-line" x1="0" y1="10" x2="700" y2="10" />
+                    <line class="x-line" x1="0" y1="60" x2="700" y2="60" />
+                    <line class="x-line" x1="0" y1="110" x2="700" y2="110" />
+                    <polyline class="data-line-red" points="55,70 155,35 255,45 355,30 455,60 550,70 650,40" />
+                    <g>
+                      <circle class="data-point-red" cx="55" cy="70" r="3.5" />
+                      <circle class="data-point-red" cx="155" cy="35" r="3.5" />
+                      <circle class="data-point-red" cx="255" cy="45" r="3.5" />
+                      <circle class="data-point-red" cx="355" cy="30" r="3.5" />
+                      <circle class="data-point-red" cx="455" cy="60" r="3.5" />
+                      <circle class="data-point-red" cx="550" cy="70" r="3.5" />
+                      <circle class="data-point-red" cx="650" cy="40" r="3.5" />
+                    </g>
+        
+                    <polyline class="data-line-blue" points="55,80 155,70 255,90 355,75 455,80 550,100 650,85" />
+                    <g>
+                      <circle class="data-point-blue" cx="55" cy="80" r="3.5" />
+                      <circle class="data-point-blue" cx="155" cy="70" r="3.5" />
+                      <circle class="data-point-blue" cx="255" cy="90" r="3.5" />
+                      <circle class="data-point-blue" cx="355" cy="75" r="3.5" />
+                      <circle class="data-point-blue" cx="455" cy="80" r="3.5" />
+                      <circle class="data-point-blue" cx="550" cy="100" r="3.5" />
+                      <circle class="data-point-blue" cx="650" cy="85" r="3.5" />
+                    </g>
+                  </svg>
+                  <div class="tooltip-wrapper">
+                    <span class="data-tooltip-red">458</span>
+                    <span class="data-tooltip-red">812</span>
+                    <span class="data-tooltip-red">746</span>
+                    <span class="data-tooltip-red">877</span>
+                    <span class="data-tooltip-red">517</span>
+                    <span class="data-tooltip-red">410</span>
+                    <span class="data-tooltip-red">613</span>
+                  </div>
+                  <div class="tooltip-wrapper">
+                    <span class="data-tooltip-blue">399</span>
+                    <span class="data-tooltip-blue">449</span>
+                    <span class="data-tooltip-blue">320</span>
+                    <span class="data-tooltip-blue">365</span>
+                    <span class="data-tooltip-blue">332</span>
+                    <span class="data-tooltip-blue">206</span>
+                    <span class="data-tooltip-blue">299</span>
+                  </div>
+                  <figcaption class="graph--label">
+                    <ul>
+                      <li>Mon</li>
+                      <li>Tue</li>
+                      <li>Wed</li>
+                      <li>Thu</li>
+                      <li>Fri</li>
+                      <li>Sat</li>
+                      <li>Sun</li>
+                    </ul>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="item content-2">
+        <div class="text">
+            <h2>최신글</h2>
+        </div>
+        <div class="community-table"> 
+            <ul class="fl-list1" id="communityList">
+                <li class="list-head">
+                    <div>작성자</div>
+                    <div>글제목</div>
+                    <div>작성일</div>
+                </li>
+                <li class="list-group-item align-items-center drag-handle">
+                    <div>작성자1</div>
+                    <div>커뮤니티 게시판 제목1</div>
+                    <div>작성일1</div>
+                </li>
+                <li class="list-group-item align-items-center drag-handle">
+                    <div>작성자2</div>
+                    <div>커뮤니티 게시판 제목2</div>
+                    <div>작성일2</div>
+                </li>
+                <li class="list-group-item align-items-center drag-handle">
+                    <div>작성자3</div>
+                    <div>커뮤니티 게시판 제목3</div>
+                    <div>작성일3</div>
+                </li>
+                <li class="list-group-item align-items-center drag-handle">
+                    <div>작성자4</div>
+                    <div>커뮤니티 게시판 제목4</div>
+                    <div>작성일4</div>
+                </li>
+                <li class="list-group-item align-items-center drag-handle">
+                    <div>작성자5</div>
+                    <div>커뮤니티 게시판 제목5</div>
+                    <div>작성일5</div>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class="item content-3">
+          <div class="text">
+              <h2>신고글 </h2>
+          </div>
+          <div class="warning-table">
+              <ul class="fl-list2" id="reportedList">
+                  <li class="list-head">
+                      <div>작성자</div>
+                      <div>글제목</div>
+                      <div>작성일</div>
+                  </li>
+                  <li class="list-group-item align-items-center drag-handle">
+                      <div>작성자1</div>
+                      <div>커뮤니티 신고 게시판 제목1</div>
+                      <div>작성일1</div>
+                  </li>
+                  <li class="list-group-item align-items-center drag-handle">
+                      <div>작성자2</div>
+                      <div>커뮤니티 신고 게시판 제목2</div>
+                      <div>작성일2</div>
+                  </li>
+                  <li class="list-group-item align-items-center drag-handle">
+                      <div>작성자3</div>
+                      <div>커뮤니티 신고 게시판 제목3</div>
+                      <div>작성일3</div>
+                  </li>
+                  <li class="list-group-item align-items-center drag-handle">
+                      <div>작성자4</div>
+                      <div>커뮤니티 신고 게시판 제목4</div>
+                      <div>작성일4</div>
+                  </li>
+                  <li class="list-group-item align-items-center drag-handle">
+                      <div>작성자5</div>
+                      <div>커뮤니티 신고 게시판 제목5</div>
+                      <div>작성일5</div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.getElementById('logouttop').addEventListener('click', function() {
+    fetch('/login/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = '/login.html';
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  })
+
+  function displayUsersData() {
+    fetch('/users?limit=10')
+      .then(response => response.json())
+      .then(data => {
+        const users = data.users;
+        const tbody = document.getElementById('userTableBody');
+        tbody.innerHTML = '';
+
+        users.forEach((user, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${user.nickname}</td>
+            <td>${user.name}</td>
+            <td>${user.income}</td>
+            <td>${new Date(user.createdAt).toLocaleDateString()}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Error fetching recent users:', error));
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    displayUsersData();
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  fetch('/community')
+    .then(response => response.json())
+    .then(data => renderList('communityList', data))
+    .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+
+  fetch('/community/reported')
+    .then(response => response.json())
+    .then(data => renderList('reportedList', data))
+    .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+});
+
+function renderList(listId, data) {
+  const list = document.getElementById(listId);
+  if (!list) {
+    console.error(`Element with id ${listId} not found`);
+    return;
+  }
+
+  data.sort((a, b) => new Date(a.updatedAt) - new Date(b.updatedAt));
+  const limitedData = data.slice(0, 5); // 데이터 최대 5개로 한정
+  list.innerHTML = '';
+  limitedData.forEach(item => { // limitedData 사용
+    const li = document.createElement('li');
+    li.className = 'list-group-item align-items-center drag-handle';
+    li.innerHTML = `
+      <div style="float: left;"><strong>작성자:</strong> ${item.userid}</div>
+      <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 50px; text-align: left;"><strong>제목:</strong> ${item.title}</div>
+      <div style="float: right;"><strong>작성일:</strong> ${item.updatedAt}</div>`;
+    list.appendChild(li);
+  });
+}
+</script>
+</html>

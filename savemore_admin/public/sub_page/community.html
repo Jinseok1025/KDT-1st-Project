@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Community</title>
+
+  <!--아이콘-->
+  <link rel="icon" type="image/png" href="../img/admin.png">
+
+  <!--글씨체-->
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+
+  <!--style-->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/community.css">
+
+</head>
+<body>
+<!-- main wrapper -->
+<div class="dashboard-main-wrapper">
+  <!-- navbar -->
+  <div class="dashboard-header">
+    <nav class="navtop">
+      <a class="nav-logo" href="../index.html">Save More</a>
+      <div class="navbar-collapse" id="navContent">
+        <ul class="navbar-right-top">
+          <li class="nav-item1">
+            <a class="nav-icons1" id="navbartext1">관리지용</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-icons2" id="navbartext2">Admin0</a>
+          </li>
+          <button class="nav-icons3" id="logouttop">Logout</button>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- end navbar -->
+  <div>
+    <ul class="rightmenu">
+      <li class="menu"><a class="first" href="#">MENU</a></li>
+      <li class="menu"><a href="./member.html">회원정보</a></li>
+      <li class="menu"><a href="./community.html">커뮤니티</a></li>
+      <li class="menu"><a href="./advertisement.html">광고</a></li>
+      <li class="menu"><a href="./bus.html">버스시간표</a></li>
+    </ul>
+  </div>
+
+  <div class="member_container">
+    <div class="member_title">
+      <p class="title">커뮤니티</p>
+    </div>
+  </div>
+  <div class="warp">
+    <div class="page_1">
+      <div class="text_box">
+        <h2>게시판리스트</h2>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="검색"/>
+          <button type="button" id="searchBtn"><img src="../img/search.png"></button>
+        </div>
+      </div>
+      <div class="list-wrapper">
+        <ul class="fl-list" id="communityList">
+          <li class="list-head">
+            <span>작성자</span>
+            <span>글제목</span>
+            <span>관리</span>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목1</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목2</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목3</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목4</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+          <li class="list-group-item align-items-center drag-handle">
+            <div>작성자</div>
+            <div>커뮤니티 게시판 제목5</div>
+            <div><button class="del">삭제</button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page_2">
+      <div class="text_box">
+        <h2>신고 리스트</h2>
+        <div class="search-container">
+          <input type="text" id="searchReportedInput" placeholder="제목을 검색하세요."/>
+          <button type="button" id="searchReportedBtn"><img src="../img/search.png" alt="Search"></button>
+        </div>
+      </div>
+      <div class="list-wrapper">
+        <ul class="fl-list" id="reportedList">
+          <li class="list-head">
+            <span>작성자</span>
+            <span>글제목</span>
+            <span>관리</span>
+          </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목1</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목2</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목3</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목4</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+            <li class="list-group-item align-items-center drag-handle">
+              <div>작성자</div>
+              <div>커뮤니티 신고 게시판 제목5</div>
+              <div><button class="del">삭제</button></div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/community')
+        .then(response => response.json())
+        .then(data => renderList('communityList', data))
+        .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+
+      fetch('/community/reported')
+        .then(response => response.json())
+        .then(data => renderList('reportedList', data))
+        .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+
+      document.getElementById('searchBtn').addEventListener('click', () => searchList('communityList'));
+      document.getElementById('searchReportedBtn').addEventListener('click', () => searchList('reportedList'));
+    });
+
+    async function deleteItem(id) {
+      try {
+        const response = await fetch(`/community/${id}`, {method: 'DELETE'});
+        const data = await response.json();
+        if (response.ok) {
+          alert(data.message);
+          fetch('/community')
+            .then(response => response.json())
+            .then(data => renderList('communityList', data))
+            .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+
+          fetch('/community/reported')
+            .then(response => response.json())
+            .then(data => renderList('reportedList', data))
+            .catch(error => console.error('목록을 불러오는 중 오류 발생:', error));
+        } else {
+          alert('아이템 삭제 중 오류 발생: ' + data.message);
+        }
+      } catch (error) {
+        console.error('아이템 삭제 중 오류 발생:', error);
+      }
+    }
+
+    async function searchList(listId) {
+      const query = document.getElementById(listId === 'communityList' ? 'searchInput' : 'searchReportedInput').value;
+      const url = listId === 'communityList' ? `/community/search?query=${query}` : `/community/search/reported?query=${query}`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        renderList(listId, data);
+      } catch (error) {
+        console.error('검색 중 오류 발생:', error);
+      }
+    }
+
+    function renderList(listId, data) {
+      const list = document.getElementById(listId);
+      if (!list) {
+        console.error(`Element with id ${listId} not found`);
+        return;
+      }
+      
+      // 날짜 오름차순으로 정렬
+      data.sort((a, b) => new Date(a.updatedAt) - new Date(b.updatedAt));
+
+      list.innerHTML = '';
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item align-items-center drag-handle';
+        li.innerHTML = `
+          <div style="float: left;"><strong>작성자:</strong> ${item.userid}</div>
+          <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 200px; text-align: left;"><strong>제목:</strong> ${item.title}</div>
+          <div style="float: right;"><button class="del" onclick="deleteItem('${item._id}')">삭제</button></div>`;
+        list.appendChild(li); 
+      });
+    }
+</script>
+</body>
+</html>
