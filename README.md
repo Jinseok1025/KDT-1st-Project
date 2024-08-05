@@ -21,9 +21,9 @@
 
 ### 실제 어플 화면
 <p align="center">
-  <img src="./main1.png">
-  <img src="./lib.png">
-  <img src="./cul.png">
-  <img src="./com.png">
-  <img src="./bus.png">
+  <img src="./main1.png" width ="200px" height="300px">
+  <img src="./lib.png" width ="200px" height="300px">
+  <img src="./cul.png" width ="200px" height="300px">
+  <img src="./com.png" width ="200px" height="300px">
+  <img src="./bus.png" width ="200px" height="300px">
 </p>
