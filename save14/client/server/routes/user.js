@@ -29,7 +29,7 @@ router.post('/number',(req,res)=>{
         const messageService = new mysms("","");
         const result = await messageService.sendOne({
             to: `${phone}`,
-            from : '01084454689',
+            from : '',
             text : `요청하신 인증번호는 [${token}]입니다.`
         })
 
