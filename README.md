@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KDT-1st-project
 
 ### savemore
